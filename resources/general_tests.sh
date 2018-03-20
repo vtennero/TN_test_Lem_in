@@ -50,7 +50,6 @@ valid_input_tests()
 			# if ! diff -u tests/error tests/logs/test$counter > /dev/null;
 			if grep -r "ERROR" tests/logs/valid_test$counter > /dev/null;
 				then
-				printf "ieubhviuehvoiebvoiebvoirbvionvoiernovi"
 					printf "$COLOR\0test$counter:   \tBOOM 🔥\n$END"
 					failed=$((failed+1))
 				else
