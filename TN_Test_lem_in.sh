@@ -14,6 +14,8 @@ clear
 echo "$COLOR\0TN_TEST // LEM_IN\n$END"
 sleep 1
 
+make
+
 mv "lem-in" lem_in
 
 invalid_input_tests $n
