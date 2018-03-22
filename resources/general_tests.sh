@@ -13,7 +13,7 @@ invalid_input_tests()
 	mkdir -p tests/logs/
 	while [ $counter -le $1 ]
 		do
-			./lem_in < tests/test$counter > tests/logs/test$counter
+			./lem_in < tests/test$counter > tests/logs/test$counter 2>&1
 			# if ! grep -r "ERROR" tests/logs/test$counter > /dev/null;
 			# if ! diff -u tests/error tests/logs/test$counter > /dev/null;
 			if grep -r "ERROR" tests/logs/test$counter > /dev/null;
@@ -45,7 +45,7 @@ valid_input_tests()
 	mkdir -p tests/logs/
 	while [ $counter -le $1 ]
 		do
-			./lem_in < tests/valid_tests/valid$counter > tests/logs/valid_test$counter
+			./lem_in < tests/valid_tests/valid$counter > tests/logs/valid_test$counter 2>&1
 			# if ! grep -r "ERROR" tests/logs/test$counter > /dev/null;
 			# if ! diff -u tests/error tests/logs/test$counter > /dev/null;
 			if grep -r "ERROR" tests/logs/valid_test$counter > /dev/null;
