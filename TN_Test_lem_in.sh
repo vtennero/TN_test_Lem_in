@@ -16,7 +16,11 @@ sleep 1
 
 make
 
+echo "$COLOR\0Compiling...\n$END"
+
 mv "lem-in" lem_in
+
+echo "$COLOR\0Compiling done.\n$END"
 
 invalid_input_tests $n
 
