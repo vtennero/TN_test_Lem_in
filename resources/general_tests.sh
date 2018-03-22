@@ -27,7 +27,7 @@ invalid_input_tests()
 		done
 	printf "$COLOR\n[DONE]\n$END"
 	printf "$COLOR$(expr $1 - $failed)/$1 tests passed\n$END"
-	printf "$COLOR\0Tip for debugging : diff -u valid testXXX\n"
+	printf "$COLOR\0Tip for debugging : diff -u valid testXXX | cat -e \n"
 
 	read -p "Press enter to continue..."
 }
@@ -58,7 +58,7 @@ valid_input_tests()
 		counter=$((counter+1))
 		done
 	printf "$COLOR\n[DONE]\n$END"
-	printf "$COLOR$(expr $1 - $failed)/$1 tests passed\n$END"
+	printf "$COLOR$(expr $1 - $failed)/$1 tests passed\n"
 
 	read -p "Press enter to continue..."
 }
