@@ -62,6 +62,8 @@ check_valgrind()
 			check_one_valgrind_valid $c
 			let "c++"
 		done
+	else
+		printf "$COLOR\0Valgrind is not installed on this machine.\n$END"
 	fi
 	rm -rf lem_in.dSYM
 	printf "$COLOR\n[LEAKS DONE]\n$END"
