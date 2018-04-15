@@ -63,7 +63,7 @@ check_valgrind()
 			let "c++"
 		done
 	else
-		printf "$COLOR\0Valgrind is not installed on this machine.\n$END"
+		printf "$COLOR\0Valgrind is not installed on this machine.\nTo install it, run the following command:\nbrew update && brew install valgrind && alias valgrind=\"~/.brew/bin/valgrind\"$END"
 	fi
 	rm -rf lem_in.dSYM
 	printf "$COLOR\n[LEAKS DONE]\n$END"
